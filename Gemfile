@@ -4,9 +4,10 @@ gem 'rails', '3.1.0.rc8'
 
 
 # Bundle edge Rails instead:
+gem "devise"
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+#gem 'sqlite3'
 
    # Devise must be required before RailsAdmin
 gem 'devise'
@@ -36,6 +37,12 @@ gem 'therubyracer-heroku', '0.8.1.pre3'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
-
 end
-gem "devise"
+
+group :production do
+  gem "pg"
+end
+
+group :development, :test do
+  gem 'sqlite3'
+end
