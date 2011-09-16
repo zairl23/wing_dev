@@ -11,7 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110914170643) do
+ActiveRecord::Schema.define(:version => 20110916042453) do
+
+  create_table "autors", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.text     "links"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "books", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.text     "links"
+    t.text     "summary"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"
@@ -25,6 +42,15 @@ ActiveRecord::Schema.define(:version => 20110914170643) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
+
+  create_table "ufos", :force => true do |t|
+    t.string   "title"
+    t.string   "url"
+    t.datetime "time"
+    t.string   "diqu"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false

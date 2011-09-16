@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  url: MyString
+  time: 2011-09-16 12:24:54
+  diqu: MyString
+
+two:
+  title: MyString
+  url: MyString
+  time: 2011-09-16 12:24:54
+  diqu: MyString
