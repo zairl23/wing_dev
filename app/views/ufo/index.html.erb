@@ -1,2 +1,20 @@
-<h1>Ufo#index</h1>
-<p>Find me in app/views/ufo/index.html.erb</p>
+<h1>Ufo List</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>地区</th>
+    <th>时间</th>
+    <th>视频观看</th>
+  </tr>
+ 
+  <% @ufos.each do |ufo| %>
+  <tr>
+    <td><%=ufo.title %></td>
+    <td><%=ufo.diqu %></td>  
+    <td><%=ufo.time %></td> 
+    <td><a href="<%=ufo.url %>">请看哦！ </td>
+  </tr>
+<% end %>
+</table>
+
