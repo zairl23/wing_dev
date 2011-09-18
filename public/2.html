@@ -1,12 +1,10 @@
-/*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
- *= require_self
- *= require_tree . 
-*/
-
-    body {
+<!DOCTYPE html>
+<meta  charset=utf-8" />
+<html>
+  <head>
+    <title>Ruby on Rails: Welcome aboard</title>
+    <style type="text/css" media="screen">
+      body {
         margin: 0;
         margin-bottom: 25px;
         padding: 0;
@@ -18,15 +16,12 @@
 
       h1 {
         font-size: 28px;
-        color: #8b19af;
+        color: #000;
       }
-      h3 {
-        color: #8b19af;
-     }
 
-      a  {color: ##8c78a9}
+      a  {color: #03c}
       a:hover {
-        background-color: #8c78a9;
+        background-color: #03c;
         color: white;
         text-decoration: none;
       }
@@ -43,7 +38,7 @@
       #content {
         float: left;
         background-color: white;
-        border: 3px solid #8c78a9;
+        border: 3px solid #aaa;
         border-top: none;
         padding: 25px;
         width: 500px;
@@ -65,7 +60,7 @@
 
 
       #header {
-        background-image: ;
+        background-image: url("/assets/rails.png");
         background-repeat: no-repeat;
         background-position: top left;
         height: 64px;
@@ -164,7 +159,7 @@
         margin-top: 25px;
         font-size: 16px;
         padding-bottom: 10px;
-        border-bottom: 1px solid ##8c78a9;
+        border-bottom: 1px solid #ccc;
       }
       #sidebar li {
         list-style-type: none;
@@ -176,3 +171,74 @@
       .filename {
         font-style: italic;
       }
+    </style>
+
+    <script type="text/javascript">
+      function about() {
+        info = document.getElementById('about-content');
+        if (window.XMLHttpRequest)
+          { xhr = new XMLHttpRequest(); }
+        else
+          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+        xhr.open("GET","rails/info/properties",false);
+        xhr.send("");
+        info.innerHTML = xhr.responseText;
+        info.style.display = 'block'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <ul id="sidebar-items">
+          <li>
+            <h3>Browse the documentation</h3>
+            <ul class="links">
+              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
+              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
+              <li><a href="http://www.ruby-doc.org/core/">Ruby core</a></li>
+              <li><a href="http://www.ruby-doc.org/stdlib/">Ruby standard library</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div id="content">
+        <div id="header">
+          <h1>Welcome Wingflying!</h1>
+          <!--<h2>You&rsquo;re riding Ruby on Rails!</h2>-->
+        </div>
+        <!--
+        <div id="about">
+          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
+          <div id="about-content" style="display: none"></div>
+        </div>
+        -->
+        <div id="getting-started">
+          <h1>Getting started</h1>
+          <h2>Wingmakers Music!</h2>
+
+        <!--
+          <ol>
+            <li>
+              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
+              <p>To see all available options, run it without parameters.</p>
+            </li>
+
+            <li>
+              <h2>Set up a default route and remove <span class="filename">public/index.html</span></h2>
+              <p>Routes are set up in <span class="filename">config/routes.rb</span>.</p>
+            </li>
+
+            <li>
+              <h2>Create your database</h2>
+              <p>Run <code>rake db:create</code> to create your database. If you're not using SQLite (the default), edit <span class="filename">config/database.yml</span> with your username and password.</p>
+            </li>
+          </ol>
+       -->
+        </div>
+      </div>
+         <div id="footer">&nbsp;</div>
+    </div>
+  </body>
+</html>
