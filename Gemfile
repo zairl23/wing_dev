@@ -48,3 +48,5 @@ group :development, :test do
 end
 #use FCKEditor
 gem 'fckeditor'
+gem "compass", ">= 0.11.5"
+
