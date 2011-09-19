@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110919135656) do
+ActiveRecord::Schema.define(:version => 20110919162752) do
 
   create_table "autors", :force => true do |t|
     t.string   "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20110919135656) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "url"
+    t.integer  "autor_id"
   end
 
   create_table "rails_admin_histories", :force => true do |t|
