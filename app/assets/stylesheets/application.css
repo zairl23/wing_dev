@@ -24,9 +24,9 @@
         color: #8b19af;
      }
 
-      a  {color: ##8c78a9}
+      a  {color: #03c}
       a:hover {
-        background-color: #8c78a9;
+        background-color: #03c;
         color: white;
         text-decoration: none;
       }
@@ -164,7 +164,7 @@
         margin-top: 25px;
         font-size: 16px;
         padding-bottom: 10px;
-        border-bottom: 1px solid ##8c78a9;
+        border-bottom: 1px solid #ccc;
       }
       #sidebar li {
         list-style-type: none;
