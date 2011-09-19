@@ -1,16 +1,17 @@
 WingDev::Application.routes.draw do
   
+  #get "books/index"
+
   root :to => 'welcome#index'
 
-  resources :samples
+  resources :samples,:books
 
   get "ufo/index"
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users
-  
-  
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
