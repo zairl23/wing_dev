@@ -1,5 +1,9 @@
 
 <img src="<%= @book.url %>" />
+<p>作者：
+<%= @autor.name %>--
+<%= link_to '了解此人',autor_path %>
+</p>
 <p>
   <%= @book.name %>
 </p>
