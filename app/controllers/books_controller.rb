@@ -4,14 +4,14 @@ class BooksController < ApplicationController
       
       respond_to do |format|
         format.html # index.html.erb
-        format.json { render json: @ufos }
+        format.json { render json: @books }
     end
   end
     
   def show
     @book = Book.find(params[:id])
-    @id = @book.autor_id
-    @autor=Autor.find(@id)
+    @autor = @book.autor
+   
     respond_to do |format|
       format.html # show.html.erb
     
