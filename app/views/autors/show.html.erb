@@ -8,12 +8,20 @@
 <p><b>探索她(他)的资料</b><br />
   <%= @autor.links %>
 </p>
-<p><b>他的作品</b><br />
-  <%= @albums.each do |album| %>
+<b>他的作品</b><br />
+<p>
+  <% @albums.each do |album| %>
     <ul>
-      <li><a href='<%=album %>'>album.name</a></li><br />
+      <li><%= album.name %>--<%= link_to '详情',album %></li>
     </ul>
-   
+   <% end %>
+</p>
+<p>
+   <% @books.each do |book| %>
+    <ul>
+      <li><%= book.name %>--<%= link_to '详情',book %></li>
+    </ul>
+   <% end %>
 </p>
 
 

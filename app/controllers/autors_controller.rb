@@ -10,9 +10,12 @@ class AutorsController < ApplicationController
 
   def show
       @autor = Autor.find(params[:id])
-      @albums =Autor.albums
+      @albums = @autor.albums
+      @books = @autor.books
       respond_to do |format|
       format.html # show.html.erb
+      format.json { render json: @autor }
+      format.json { render json: @albums }
      end
   end
 end
