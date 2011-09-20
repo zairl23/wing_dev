@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  autor_id: 1
+  shijian: 2011-09-20
+  description: MyText
+
+two:
+  name: MyString
+  autor_id: 1
+  shijian: 2011-09-20
+  description: MyText

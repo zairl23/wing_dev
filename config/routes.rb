@@ -1,14 +1,14 @@
 WingDev::Application.routes.draw do
   
-  get "autors/index"
+  #get "autors/index"
 
-  get "autors/show"
+  #get "autors/show"
 
   #get "books/index"
 
   root :to => 'welcome#index'
 
-  resources :samples,:books,:autors
+  resources :samples,:books,:autors,:albums
 
   get "ufo/index"
 
