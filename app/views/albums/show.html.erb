@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<img src="<%=@album.url %>" />
 <p>
   <b>专辑名:</b>
   <%= @album.name %>
@@ -19,7 +19,10 @@
   <b>简介:</b><br />
   <%= @album.description %>
 </p>
-
+<p>
+  <b>资源链接</b>
+  <%= @album.links %>
+</p>
 
 
 <%= link_to '退回列表', albums_path %>

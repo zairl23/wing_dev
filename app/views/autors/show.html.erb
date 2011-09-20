@@ -1,14 +1,19 @@
+<h1><%= @autor.name %></h1>
 
-<p>
-  <%= @autor.name %>
-</p>
 
-<p>
+<p><b>简介：</b><br />
   <%= @autor.description %>
 </p>
 
-<p>
+<p><b>探索她(他)的资料</b><br />
   <%= @autor.links %>
+</p>
+<p><b>他的作品</b><br />
+  <%= @albums.each do |album| %>
+    <ul>
+      <li><a href='<%=album %>'>album.name</a></li><br />
+    </ul>
+   
 </p>
 
 

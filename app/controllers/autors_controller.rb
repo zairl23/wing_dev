@@ -10,6 +10,7 @@ class AutorsController < ApplicationController
 
   def show
       @autor = Autor.find(params[:id])
+      @albums =Autor.albums
       respond_to do |format|
       format.html # show.html.erb
      end
