@@ -1,0 +1,25 @@
+<h1>Listing musics</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @musics.each do |music| %>
+  <tr>
+    <td><%= music.name %></td>
+    <td><%= music.url %></td>
+    <td><%= link_to 'Show', music %></td>
+    <td><%= link_to 'Edit', edit_music_path(music) %></td>
+    <td><%= link_to 'Destroy', music, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Music', new_music_path %>

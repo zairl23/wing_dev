@@ -15,6 +15,7 @@ class AlbumsController < ApplicationController
   def show
     @album = Album.find(params[:id])
     @autor = @album.autor
+    @musics = @album.musics
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @album }

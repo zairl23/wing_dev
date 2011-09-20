@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110920125451) do
+ActiveRecord::Schema.define(:version => 20110920170215) do
 
   create_table "albums", :force => true do |t|
     t.string   "name"
@@ -41,6 +41,14 @@ ActiveRecord::Schema.define(:version => 20110920125451) do
     t.timestamp "updated_at"
     t.string    "url"
     t.integer   "autor_id"
+  end
+
+  create_table "musics", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "album_id"
   end
 
   create_table "rails_admin_histories", :force => true do |t|

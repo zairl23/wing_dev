@@ -1,23 +1,25 @@
 
 <img src="<%= @book.url %>" />
-<p>作者：
+<p><b>作者：</b>
 <%= @autor.name %>--
 <%= link_to '了解此人',@autor %>
 </p>
-<p>
+<p><b>书名：</b>
   <%= @book.name %>
 </p>
 
-<p>
+<p><b>简介：</b><br />
   <%= @book.description %>
 </p>
 
-<p>
-  <%= @book.links %>
-</p>
-
-<p>
+<p><b>目录：</b><br />
   <%= @book.summary %>
 </p>
 
-<%= link_to "回列表", books_path %>
+<p><b>探索她吧！</b><br />
+  <%= @book.links %>
+</p>
+
+
+
+<%= link_to "返回列表", books_path %>

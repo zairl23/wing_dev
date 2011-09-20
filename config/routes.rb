@@ -1,5 +1,7 @@
 WingDev::Application.routes.draw do
   
+  #resources :musics
+
   #get "autors/index"
 
   #get "autors/show"

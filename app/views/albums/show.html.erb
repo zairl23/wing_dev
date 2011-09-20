@@ -24,5 +24,17 @@
   <%= @album.links %>
 </p>
 
+<p>
+  <b>歌曲试听</b>
+  <% @musics.each do |music| %>
+    <ul>
+      <li><%=music.name %><br />
+        <audio src="<%=music.url %>" controls="controls" preload="none">
+        您的浏览器不支持 audio 标签。
+        </audio> 
+      </li>
+    </ul>
+  <% end %>
+</p>
 
 <%= link_to '退回列表', albums_path %>
