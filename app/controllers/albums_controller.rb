@@ -14,7 +14,7 @@ class AlbumsController < ApplicationController
   # GET /albums/1.json
   def show
     @album = Album.find(params[:id])
-
+    @autor = @album.autor
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @album }
@@ -79,4 +79,4 @@ class AlbumsController < ApplicationController
       #format.json { head :ok }
     #end
   #end
-#end
+end

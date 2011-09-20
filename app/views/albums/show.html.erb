@@ -1,25 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b>专辑名:</b>
   <%= @album.name %>
 </p>
 
 <p>
-  <b>Autor:</b>
-  <%= @album.autor %>
+  <b>艺术家:</b>
+  <%= @autor.name %>
 </p>
 
 <p>
-  <b>Shijian:</b>
+  <b>发行:</b>
   <%= @album.shijian %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b>简介:</b><br />
   <%= @album.description %>
 </p>
 
 
-#<%= link_to 'Edit', edit_album_path(@album) %> |
-<%= link_to 'Back', albums_path %>
+
+<%= link_to '退回列表', albums_path %>
