@@ -1,15 +1,13 @@
 <h1>唱片列表</h1>
 
-
-
 <% @albums.each do |album| %>
 
   <ul>  
-   <li><%= album.name %>--
-    
-    <%= link_to '详情', album %></li>
-
+   <li>
+     <%= link_to album.name,album %>
+   </li>
   </ul>
+
 <% end %>
 
 

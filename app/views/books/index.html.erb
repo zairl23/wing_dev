@@ -1,13 +1,13 @@
-<h1>Theses Books  may catch you ! </h1>
+<h1>书籍列表 </h1>
+
 
 <% @books.each do |book| %>
   <ul>
     <li>
-       <%=book.name %>||
-       
-       <%= link_to '详情', book %>
+       <h2><%=link_to book.name,book %></h2>
     </li>
-  </ul>
+  <ul>
 <% end %>
+
 
 

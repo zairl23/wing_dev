@@ -1,9 +1,7 @@
 <% @autors.each do |autor| %>
   <ul>
     <li>
-     
-       <%=autor.name %>--<%= link_to '详情',autor %>
-     
+      <%= link_to autor.name,autor %> 
     </li>
   </ul>
 <% end %>

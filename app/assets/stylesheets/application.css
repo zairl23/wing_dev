@@ -24,11 +24,16 @@
         color: #8b19af;
      }
 
-      a  {color: #03c}
+      a  {
+        color: #03c
+        
+        
+      }
       a:hover {
-        background-color: #03c;
+        background-blor: #8b19af;
         color: white;
         text-decoration: none;
+        
       }
 
 
@@ -135,19 +140,21 @@
         color: #333;
         margin-bottom: 25px;
       }
-      #getting-started ol {
+      #getting-started ul {
         margin-left: 0;
         padding-left: 0;
+        list-style: none;
       }
       #getting-started li {
-        font-size: 18px;
+        font-size: 13px;
         color: #888;
         margin-bottom: 25px;
+        list-style: none;
       }
       #getting-started li h2 {
         margin: 0;
         font-weight: normal;
-        font-size: 18px;
+        font-size: ;
         color: #333;
       }
       #getting-started li p {
