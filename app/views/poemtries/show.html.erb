@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+<img src="<%=@poemtry.url %>" />
+<p>
+  <b>诗歌名:</b>
+  <%= @poemtry.name %>
+</p>
+
+<p>
+  <b>艺术家:</b>
+  <%= link_to @autor.name ,@autor%>
+</p>
+
+<p>
+  <b>发行:</b>
+  <%= @poemtry.shijian %>
+</p>
+
+<p>
+  <b>简介:</b><br />
+  <%= @poemtry.description %>
+</p>
+
+<p>
+  <b>章节阅读</b>
+  <% @shiges.each do |shige| %>
+    <ul>
+      <li>
+       <%=link_to shige.name, shige  %>
+      </li>
+    </ul>
+  <% end %>
+</p>
+
+<%= link_to '退回列表', poemtries_path %>

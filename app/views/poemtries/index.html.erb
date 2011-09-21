@@ -1,0 +1,12 @@
+<h1>诗歌列表</h1>
+
+<% @poemtries.each do |poemtry| %>
+
+   <ul>
+     <li>
+       <%= link_to poemtry.name ,poemtry %>
+     </li>
+   </ul>
+<% end %>
+
+

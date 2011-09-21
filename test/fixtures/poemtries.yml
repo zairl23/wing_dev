@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  shijian: 2011-09-21
+  autor_id: 1
+  description: MyText
+  url: MyString
+
+two:
+  name: MyString
+  shijian: 2011-09-21
+  autor_id: 1
+  description: MyText
+  url: MyString

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110920170215) do
+ActiveRecord::Schema.define(:version => 20110921122415) do
 
   create_table "albums", :force => true do |t|
     t.string   "name"
@@ -51,6 +51,16 @@ ActiveRecord::Schema.define(:version => 20110920170215) do
     t.integer  "album_id"
   end
 
+  create_table "poemtries", :force => true do |t|
+    t.string   "name"
+    t.date     "shijian"
+    t.integer  "autor_id"
+    t.text     "description"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "rails_admin_histories", :force => true do |t|
     t.text      "message"
     t.string    "username"
@@ -68,6 +78,14 @@ ActiveRecord::Schema.define(:version => 20110920170215) do
     t.string    "name"
     t.timestamp "created_at"
     t.timestamp "updated_at"
+  end
+
+  create_table "shiges", :force => true do |t|
+    t.string   "name"
+    t.integer  "poemtry_id"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "ufos", :force => true do |t|

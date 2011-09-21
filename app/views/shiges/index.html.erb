@@ -1,0 +1,12 @@
+<h1>章节列表</h1>
+
+<% @shiges.each do |shige| %>
+
+   <ul>
+     <li>
+       <%= link_to shige.name, shige %>
+     </li>
+   </ul>
+<% end %>
+
+

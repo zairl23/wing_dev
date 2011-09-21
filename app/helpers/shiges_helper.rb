@@ -1,0 +1,2 @@
+module ShigesHelper
+end
