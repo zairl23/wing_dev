@@ -5,7 +5,7 @@ RailsAdmin.config do |config|
       field :content, :text do
         ckeditor  true
       end
-      
+      field :poemtry_id, :integer
     end
   end
 end

@@ -26,6 +26,14 @@
    <% end %>
 </p>
 
+<p>
+   <% @poemtries.each do |poemtry| %>
+    <ul>
+      <li><%=link_to poemtry.name ,poemtry %></li>
+    </ul>
+   <% end %>
+</p>
+
 
 
 <%= link_to "回列表", autors_path %>
