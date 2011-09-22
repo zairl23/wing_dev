@@ -14,7 +14,7 @@ class ShigesController < ApplicationController
    
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @poemtry }
+      format.json { render json: @shige }
     end
   end
 

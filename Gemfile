@@ -49,4 +49,6 @@ end
 #use FCKEditor
 gem 'fckeditor'
 gem "compass", ">= 0.11.5"
+gem 'ckeditor', :git => "https://github.com/galetahub/ckeditor.git"
+gem 'paperclip'
 
