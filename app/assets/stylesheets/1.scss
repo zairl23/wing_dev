@@ -1,0 +1,133 @@
+$a-color: #8b19af;
+$a-hover-color: white;
+$a-hover-bgcolor: #8b19af;
+$h-color:  #8b19af;
+$bgcolor:  #d2c4e6;
+$border-botom-color: #4e3274;
+body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: $bgcolor;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #333;
+    
+    #page {
+            background-color: #f0f0f0;
+            width: 750px;
+            margin: 0;
+            margin-left: auto;
+            margin-right: auto;
+            #sidebar {
+                       float: right;
+                       width: 175px;
+                       ul  {
+                              margin-left: 0;
+                              padding-left: 0;
+                              list-style-type: none;
+                              h3 {
+                                    margin-top: 25px;
+                                    font-size: 16px;
+                                    padding-bottom: 10px #{$border-botom-color};
+                                    border-bottom: 1px solid #{$border-botom-color};
+                                    color: $h-color;
+                                 }
+                               &.links li  {
+                                               margin-bottom: 5px;
+                                               list-style-type: none;
+                                            }
+                               a            {
+                                               color: $a-color;
+                                               &:hover {
+                                                          background-color: $a-hover-bgcolor;
+                                                          color: $a-hover-color;
+                                                          text-decoration: none;
+                                                       }
+                                             }
+                           }
+                       
+                     }
+            #content {
+                       float: left;
+                       background-color: white;
+                       border: 3px solid #8c78a9;
+                       border-top: none;
+                       padding: 25px;
+                       width: 500px;
+                       #header {
+                                 
+                                 background-repeat: no-repeat;
+                                 background-position: top left;
+                                 height: 64px;
+                                 padding-left: 75px;
+                                 padding-right: 30px;
+                                  h2         {
+                                               color: $h-color;
+                                               font-weight: normal;
+                                               font-size: 16px;
+                                               margin: 0;
+                                             }
+                                  h1         {        
+                                               margin: 0;
+                                               color: $h-color;
+                                             }
+                              }
+                       #getting-started {
+                                           border-top: 1px solid #ccc;
+                                           margin-top: 25px;
+                                           padding-top: 15px;
+                                           padding-left: 75px;
+                                           padding-right: 30px;
+                                            h1                  {
+                                                                   margin: 0;
+                                                                   font-size: 20px;
+                                                                   color: $h-color;
+                                                                }
+                                            h2                  {
+                                                                   margin: 0;
+                                                                   font-size: 14px;
+                                                                   font-weight: normal;
+                                                                   color: $h-color;
+                                                                   margin-bottom: 25px;
+                                                                }
+                                            ul                  {
+                                                                   margin-left: 0;
+                                                                   padding-left: 0;
+                                                                   list-style: none;
+                                                                    a {
+                                                                        color: $a-color;
+                                                                        &:hover {
+                                                                                   background-color: $a-hover-bgcolor;
+                                                                                   color: $a-hover-color;
+                                                                                   text-decoration: none;
+                                                                                }
+                                                                       }
+                                                                }
+                                                                
+                                            li                  {
+                                                                   font-size: 13px;
+                                                                   color: #888;
+                                                                   margin-bottom: 25px;
+                                                                   list-style: none;
+                                                                   h2 {
+                                                                        margin: 0;
+                                                                        font-weight: normal;
+                                                                        color: #333;
+                                                                      }
+                                                                   p  {
+                                                                        color: #555;
+                                                                        font-size: 13px;
+                                                                      }
+                                    
+                                                                }
+                                                           
+                                        }
+                     
+                    }
+        
+          }
+     
+
+}
+
