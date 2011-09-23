@@ -1,5 +1,7 @@
 WingDev::Application.routes.draw do
   
+  get "zhuye/index"
+
   get "shiges/index"
 
   get "shiges/show"
@@ -16,7 +18,7 @@ WingDev::Application.routes.draw do
 
   #get "books/index"
 
-  root :to => 'welcome#index'
+  root :to => 'zhuye#index'
 
   resources :samples,:books,:autors,:albums,:poemtries,:shiges
 
