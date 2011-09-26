@@ -1,0 +1,44 @@
+!!! 5 
+%html
+  %head
+    %title WingFlying
+    = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'print'
+    = stylesheet_link_tag 'screen'
+    = stylesheet_link_tag 'link_icons.css', :media => 'screen, projection'
+
+    /[if lt IE 8]
+    = stylesheet_link_tag 'ie'
+    = javascript_include_tag 'application.js'
+    = csrf_meta_tags
+  
+  %body
+    .page
+      #header
+        %h1 Welcome to WingFlying!
+      #sidebar
+        %ul
+          %li
+            %h3 网站导航
+          %li
+            %a{ :href => 'http://freezing-cloud-648.heroku.com'}远程主页
+          %li
+            %a{ :href => 'http://0.0.0.0:3000/'}首页
+          %li
+            %a{ :href => 'http://0.0.0.0:3000/books'}书籍
+          %li
+            %a{ :href => 'http://0.0.0.0:3000/albums'}音乐
+          %li
+            %a{ :href => 'http://0.0.0.0:3000/autors'}大师
+          %li
+            %a{ :href => 'http://0.0.0.0:3000/'}图片
+          %li
+            %a{ :href => 'http://0.0.0.0:3000/poemtries'}诗歌
+          %li
+            %a{ :href => 'http://0.0.0.0:3000/ufo/index'}揭密
+                   
+      #content
+        = yield
+         
+      #footer
+        %strong neychang setup in 2011

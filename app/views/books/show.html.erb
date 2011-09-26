@@ -8,15 +8,15 @@
 </p>
 
 <p><b>简介：</b><br />
-  <%= @book.description %>
+  <%=sanitize @book.description %>
 </p>
 
 <p><b>目录：</b><br />
-  <%= @book.summary %>
+  <%=sanitize @book.summary %>
 </p>
 
 <p><b>探索她吧！</b><br />
-  <%= @book.links %>
+  <%=sanitize @book.links %>
 </p>
 
 

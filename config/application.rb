@@ -41,7 +41,17 @@ module WingDev
 
     # Enable the asset pipeline
     config.assets.enabled = true
-
+    #Change allowed default attributes
+    #config.action_view.sanitized_allowed_attributes = 'a'
+    
+    #Remove tags to the default allowed tags
+    #config.after_initialize do
+    #ActionView::Base.sanitized_allowed_tags.delete 'div'
+    #have rails generators use haml instead of erb
+    config.generators do |g|
+      g.template_engine :haml
+    end
+    
     
   end
 end

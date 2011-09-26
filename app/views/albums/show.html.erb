@@ -17,11 +17,11 @@
 
 <p>
   <b>简介:</b><br />
-  <%= @album.description %>
+  <%=sanitize @album.description %>
 </p>
 <p>
   <b>资源链接</b>
-  <%= @album.links %>
+  <%=sanitize @album.links %>
 </p>
 
 <p>

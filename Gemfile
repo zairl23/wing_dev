@@ -52,4 +52,5 @@ gem "compass", ">= 0.11.5"
 gem 'ckeditor', :git => "https://github.com/galetahub/ckeditor.git"
 gem 'paperclip'
 gem 'rb-inotify'
+gem 'haml-rails',:git => "https://github.com/indirect/haml-rails.git"
 

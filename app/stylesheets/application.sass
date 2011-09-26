@@ -1,0 +1,49 @@
+@import blueprint
+@import "blueprint/colors"
+@import "blueprint/grid"
+@import "blueprint/fancy-type"
+@import "blueprint/typography"
+@import "compass/typography/links/link-colors"
+@import "blueprint/link-icons"
+
+$blueprint-background-color: #d2c4e6
+$link-color: #0066cc
+$link-hover-color: #0099ff
+$link-focus-color: $link-hover-color
+$link-active-color: lighten(adjust-hue($link-color, 75deg), 10%)
+$link-visited-color: darken($link-color, 10%)
+
+.page
+  +container
+  +blueprint-typography(true)
+  background-color: $blueprint-background-color
+  #footer,#header
+    +column(24)
+  #header
+    +append-bottom(5em)
+    +prepend-top(5em)
+  #footer
+    background-color:white
+  #sidebar
+    +column(8,true)
+    +prepend(16)
+   
+    
+    
+  #content
+    +column(16)
+    +pull(24,true)
+    +colborder()
+    +append-bottom()
+    
+  
+
+    
+     
+ 
+
+
+
+
+ 
+
