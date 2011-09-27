@@ -30,4 +30,7 @@ WingDev::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  #let Paperclip know to look there by adding that directory to its path.
+  Paperclip.options[:command_path] = "/usr/bin/"
 end

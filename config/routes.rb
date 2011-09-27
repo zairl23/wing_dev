@@ -1,5 +1,7 @@
 WingDev::Application.routes.draw do
   
+  resources :pictures
+
   get "zhuye/index"
 
   get "shiges/index"
