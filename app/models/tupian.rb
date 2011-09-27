@@ -4,5 +4,4 @@ class Tupian < ActiveRecord::Base
   # handling delete in your model, if needed. Replace all image occurences with your asset name.
   attr_accessor :delete_pic
   before_validation { self.pic = nil if self.delete_pic == '1' }
-
 end
