@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @tupian.name
+%p
+  %b Description:
+  = @tupian.description
+%p
+  %b Tag:
+  = @tupian.tag
+
+= link_to 'Edit', edit_tupian_path(@tupian)
+\|
+= link_to 'Back', tupians_path

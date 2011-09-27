@@ -1,0 +1,19 @@
+= form_for @tupian do |f|
+  -if @tupian.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@tupian.errors.count, "error")} prohibited this tupian from being saved:"
+      %ul
+        - @tupian.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    = f.label :tag
+    = f.text_field :tag
+  .actions
+    = f.submit 'Save'

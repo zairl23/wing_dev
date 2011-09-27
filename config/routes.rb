@@ -1,5 +1,7 @@
 WingDev::Application.routes.draw do
   
+  resources :tupians
+
   resources :pictures
 
   get "zhuye/index"

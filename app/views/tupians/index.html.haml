@@ -1,0 +1,23 @@
+%h1 Listing tupians
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th Tag
+    %th
+    %th
+    %th
+
+  - @tupians.each do |tupian|
+    %tr
+      %td= tupian.name
+      %td= tupian.description
+      %td= tupian.tag
+      %td= link_to 'Show', tupian
+      %td= link_to 'Edit', edit_tupian_path(tupian)
+      %td= link_to 'Destroy', tupian, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Tupian', new_tupian_path
