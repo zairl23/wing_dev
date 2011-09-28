@@ -1,15 +1,20 @@
 %p#notice= notice
 
 %p
-  %b Name:
+  %b 主题:
   = @tupian.name
 %p
-  %b Description:
+  %b 简语:
   = @tupian.description
 %p
-  %b Tag:
+  %b 标签:
   = @tupian.tag
+%p
+  %b 图片：
+  = image_tag @tupian.pic.url 
+-#  = image_tag @tupian.pic.url(:medium) 
+-#  = image_tag @tupian.pic.url(:thumb) 
 
-= link_to 'Edit', edit_tupian_path(@tupian)
-\|
+-# = link_to 'Edit', edit_tupian_path(@tupian)
+-# \|
 = link_to 'Back', tupians_path
