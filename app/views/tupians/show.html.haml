@@ -4,17 +4,18 @@
   %b 主题:
   = @tupian.name
 %p
+  %b 图片：
+  %br
+  = image_tag @tupian.pic.url 
+  %br
+  = image_tag @tupian.pic.url(:thumb) 
+-#= image_tag @tupian.pic.url(:medium) 
+-# = link_to 'Edit', edit_tupian_path(@tupian)
+-# \|
+%p
   %b 简语:
-  = @tupian.description
+  = sanitize @tupian.description
 %p
   %b 标签:
   = @tupian.tag
-%p
-  %b 图片：
-  = image_tag @tupian.pic.url 
--#  = image_tag @tupian.pic.url(:medium) 
--#  = image_tag @tupian.pic.url(:thumb) 
-
--# = link_to 'Edit', edit_tupian_path(@tupian)
--# \|
 = link_to 'Back', tupians_path

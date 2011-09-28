@@ -12,29 +12,30 @@ $link-hover-color: #0099ff
 $link-focus-color: $link-hover-color
 $link-active-color: lighten(adjust-hue($link-color, 75deg), 10%)
 $link-visited-color: darken($link-color, 10%)
-
-.page
-  +container
-  +blueprint-typography(true)
+body
   background-color: $blueprint-background-color
-  #footer,#header
-    +column(24)
-  #header
-    +append-bottom(5em)
-    +prepend-top(5em)
-  #footer
-    background-color:white
-  #sidebar
-    +column(8,true)
-    +prepend(16)
-   
-    
-    
-  #content
-    +column(16)
-    +pull(24,true)
-    +colborder()
-    +append-bottom()
+  .page
+    +container
+    +blueprint-typography(true)
+    background-color: white
+    #footer,#header
+      +column(24)
+    #header
+      +append-bottom()
+      background-image: url("/assets/nav_wood.png")
+      background-repeat: repeat-x
+      background-position: top left
+    #footer
+      background-color:white
+    #sidebar
+      +column(8,true)
+      +prepend(16)
+      +push(3)
+    #content
+      +column(16)
+      +pull(23,true)
+      +append-bottom()
+      
     
   
 
