@@ -1,8 +1,8 @@
-/* line 15, ../../stylesheets/application.sass */
+/* line 16, ../../stylesheets/application.sass */
 body {
   background-color: #d2c4e6;
 }
-/* line 17, ../../stylesheets/application.sass */
+/* line 18, ../../stylesheets/application.sass */
 body .page {
   width: 950px;
   margin: 0 auto;
@@ -204,7 +204,7 @@ body .page .quiet {
 body .page .loud {
   color: #111111;
 }
-/* line 21, ../../stylesheets/application.sass */
+/* line 22, ../../stylesheets/application.sass */
 body .page #footer, body .page #header {
   display: inline;
   float: left;
@@ -215,14 +215,14 @@ body .page #footer, body .page #header {
 * html body .page #footer, * html body .page #header {
   overflow-x: hidden;
 }
-/* line 23, ../../stylesheets/application.sass */
+/* line 24, ../../stylesheets/application.sass */
 body .page #header {
   margin-bottom: 1.5em;
   background-image: url("/assets/nav_wood.png");
   background-repeat: repeat-x;
   background-position: top left;
 }
-/* line 30, ../../stylesheets/application.sass */
+/* line 31, ../../stylesheets/application.sass */
 body .page #sidebar {
   display: inline;
   float: left;
@@ -238,7 +238,7 @@ body .page #sidebar {
 * html body .page #sidebar {
   overflow-x: hidden;
 }
-/* line 34, ../../stylesheets/application.sass */
+/* line 35, ../../stylesheets/application.sass */
 body .page #content {
   display: inline;
   float: left;
