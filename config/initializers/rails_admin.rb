@@ -66,21 +66,21 @@ end
     end
 end
 
- # config.model Tupian do
-  #  edit do 
-   #   field :name,:string
-    #  field :description,:text do
-     #   ckeditor true
-      #end
-      #field :tag,:string 
-      #field :pic,:paperclip_file do 
-       # thumb_method :thumb # for images. Will default to full size image, which might break the layout,add ':paperclip_file'
-        #delete_method :delete_pic # actually not needed in this case: default is "delete_#{field_name}" if the object responds to it
-      #end
+  config.model Tupian do
+    edit do 
+      field :name,:string
+      field :description,:text do
+        ckeditor true
+      end
+      field :tag,:string 
+      field :pic,:paperclip_file do 
+        thumb_method :thumb # for images. Will default to full size image, which might break the layout,add ':paperclip_file'
+        delete_method :delete_pic # actually not needed in this case: default is "delete_#{field_name}" if the object responds to it
+      end
       
       
-    #end
-  #end
+    end
+  end
  
    
 end
