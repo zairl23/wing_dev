@@ -82,5 +82,9 @@ end
     end
   end
  
-   
+# use a custom dead-stupid authorization rule:
+  config.authorize_with do
+    redirect_to root_path unless warden.user.is_admin?
+  end
+  
 end
