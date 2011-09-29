@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110927124455) do
+ActiveRecord::Schema.define(:version => 20110929074412) do
 
   create_table "albums", :force => true do |t|
     t.string   "name"
@@ -124,8 +124,8 @@ ActiveRecord::Schema.define(:version => 20110927124455) do
   end
 
   create_table "users", :force => true do |t|
-    t.string    "email",                                 :default => "", :null => false
-    t.string    "encrypted_password",     :limit => 128, :default => "", :null => false
+    t.string    "email",                                 :default => "",    :null => false
+    t.string    "encrypted_password",     :limit => 128, :default => "",    :null => false
     t.string    "reset_password_token"
     t.timestamp "reset_password_sent_at"
     t.timestamp "remember_created_at"
@@ -136,6 +136,7 @@ ActiveRecord::Schema.define(:version => 20110927124455) do
     t.string    "last_sign_in_ip"
     t.timestamp "created_at"
     t.timestamp "updated_at"
+    t.boolean   "admin",                                 :default => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
