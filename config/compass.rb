@@ -22,11 +22,9 @@ http_path = "/"
 # sass-convert -R --from scss --to sass app/stylesheets scss && rm -rf sass && mv scss sass
 
 # Changing the output directory of the resulting CSS file
-#if Rails.env.production?
-  #css_dir = "tmp/stylesheets/compiled"
- # sass_dir = 'app/views/stylesheets'
-#else
- # css_dir = "public/stylesheets/"
- # sass_dir = 'app/stylesheets'
-#end
-css_dir = "app/assets/stylesheets/"
+if Compass::AppIntegration::Rails.env == "production"
+  css_dir = "tmp/stylesheets/compiled"
+else
+  css_dir = "app/assets/stylesheets/"
+end
+#css_dir = "app/assets/stylesheets/"

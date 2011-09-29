@@ -2,8 +2,8 @@
 
 require ::File.expand_path('../config/environment',  __FILE__)
 
-if Rails.env.production?
-  use Rack::Static, :urls => ["/stylesheets/compiled"], :root => "tmp" #FOR COMPASS
+if Rails.env == "production"
+use Rack::Static, :urls => ["/stylesheets/compiled"], :root => "tmp" #FOR COMPASS
 end
 
 run WingDev::Application

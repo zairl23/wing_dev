@@ -232,7 +232,7 @@ body .page #sidebar {
   display: inline;
   float: left;
   position: relative;
-  margin: 0 -120px 1.5em 120px;
+  margin: 0 -80px 1.5em 80px;
 }
 /* line 147, ../../../../../../usr/local/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body .page #sidebar {

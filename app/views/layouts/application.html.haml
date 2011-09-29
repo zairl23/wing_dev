@@ -3,8 +3,8 @@
   %head
     %title WingFlying
     = stylesheet_link_tag 'application'
-    = stylesheet_link_tag 'print'
-    = stylesheet_link_tag 'screen'
+    = stylesheet_link_tag 'print',:media => 'screen, projection'
+    = stylesheet_link_tag 'screen',:media => 'screen, projection'
     = stylesheet_link_tag 'link_icons.css', :media => 'screen, projection'
 
     /[if lt IE 8]
@@ -13,6 +13,7 @@
     = csrf_meta_tags
   
   %body
+    
     .page
       #header
         %h1 Welcome to WingFlying!
@@ -41,4 +42,5 @@
         = yield
          
       #footer
-        %strong neychang setup in 2011
+        %center 
+          %h4 neychang setup in 2011
