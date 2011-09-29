@@ -27,4 +27,8 @@ if Compass::AppIntegration::Rails.env == "production"
 else
   css_dir = "app/assets/stylesheets/"
 end
-#css_dir = "app/assets/stylesheets/"
+
+# use a custom dead-stupid authorization rule:
+  config.authorize_with do
+    redirect_to root_path unless warden.user.is_admin?
+  end
