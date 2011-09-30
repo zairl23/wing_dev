@@ -81,10 +81,21 @@ end
       
     end
   end
- 
+  
+  config.model User do 
+   edit do
+     field :email,:string
+     field :password,:string
+     field :password_confirmation,:string
+     #field :admin,:boolean do
+       #formatted_value do
+         #bindings[:view].image_tag("rails_admin/#{value ? 'bullet_black' : 'bullet_white'}.png", :alt => value.to_s)
+       #end 
+     #end  
+   end
 # use a custom dead-stupid authorization rule:
  # config.authorize_with do
   #  redirect_to root_path unless warden.user.is_admin?
  # end
-  
+end 
 end
