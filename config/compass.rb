@@ -24,8 +24,10 @@ http_path = "/"
 # Changing the output directory of the resulting CSS file
 if Compass::AppIntegration::Rails.env == "production"
   css_dir = "tmp/stylesheets/compiled"
+  sass_dir = "app/stylesheets"
 else
-  css_dir = "app/assets/stylesheets/"
+  css_dir = "app/assets/stylesheets"
+  sass_dir = "app/stylesheets"
 end
 
 
