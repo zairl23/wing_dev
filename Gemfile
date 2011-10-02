@@ -53,4 +53,5 @@ gem 'ckeditor', :git => "https://github.com/galetahub/ckeditor.git"
 gem 'paperclip'
 gem 'rb-inotify'
 gem 'haml-rails',:git => "https://github.com/indirect/haml-rails.git"
+gem 'cancan'
 
