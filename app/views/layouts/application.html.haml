@@ -8,10 +8,10 @@
       = stylesheet_link_tag 'screen',:media => 'screen, projection'
       = stylesheet_link_tag 'link_icons.css', :media => 'screen, projection'
     - else
-      %link{ :type => 'text/css', :rel => 'stylesheet', :href => '/tmp/stylesheets/compiled/application.css'}/
-      %link{ :type => 'text/css', :rel => 'stylesheet', :href => '/tmp/stylesheets/compiled/print.css',:media => 'screen, projection' }/
-      %link{ :type => 'text/css', :rel => 'stylesheet', :href => '/tmp/stylesheets/compiled/screen.css',:media => 'screen, projection'}/
-      %link{ :type => 'text/css', :rel => 'stylesheet', :href => '/tmp/stylesheets/compiled/link_icons.css',:media => 'screen, projection'}/  
+      %link{ :type => 'text/css', :rel => 'stylesheet', :href => 'app/tmp/stylesheets/compiled/application.css'}/
+      %link{ :type => 'text/css', :rel => 'stylesheet', :href => 'app/tmp/stylesheets/compiled/print.css',:media => 'screen, projection' }/
+      %link{ :type => 'text/css', :rel => 'stylesheet', :href => 'app/tmp/stylesheets/compiled/screen.css',:media => 'screen, projection'}/
+      %link{ :type => 'text/css', :rel => 'stylesheet', :href => 'app/tmp/stylesheets/compiled/link_icons.css',:media => 'screen, projection'}/  
     /[if lt IE 8]
     = stylesheet_link_tag 'ie'
     = javascript_include_tag 'application.js'
