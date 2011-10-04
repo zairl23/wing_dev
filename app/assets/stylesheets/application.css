@@ -222,7 +222,7 @@ body .page #header {
   background-repeat: repeat-x;
   background-position: top left;
 }
-/* line 31, ../../stylesheets/application.sass */
+/* line 33, ../../stylesheets/application.sass */
 body .page #sidebar {
   display: inline;
   float: left;
@@ -238,7 +238,7 @@ body .page #sidebar {
 * html body .page #sidebar {
   overflow-x: hidden;
 }
-/* line 35, ../../stylesheets/application.sass */
+/* line 37, ../../stylesheets/application.sass */
 body .page #content {
   display: inline;
   float: left;
