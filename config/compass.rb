@@ -27,7 +27,7 @@ if Compass::AppIntegration::Rails.env_production?
   css_dir = "tmp/stylesheets/compiled"
   sass_dir = "app/stylesheets"
 else
-  css_dir = "app/assets/stylesheets"
+  css_dir = "public/stylesheets"
   sass_dir = "app/stylesheets"
 end
 
