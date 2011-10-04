@@ -1,5 +1,5 @@
-require 'compass'
-require 'compass/app_integration/rails'
+#require 'compass'
+#require 'compass/app_integration/rails'
 #Compass::AppIntegration::Rails.initialize!
 
 #if Compass::AppIntegration::Rails.env == "production"
