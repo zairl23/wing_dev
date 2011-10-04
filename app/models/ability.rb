@@ -9,11 +9,11 @@ class Ability
          can :manage, :all
          can :see_timestamps, User
 
-      elsif user.role? :normal
+       elsif user.role? :normal
         can :manage, User, :id => user.id 
         can :see_timestamps, User, :id => user.id    
-      end
-      
+       end
+   end      
     #
     # The first argument to `can` is the action you are giving the user permission to do.
     # If you pass :manage it will apply to every action. Other common actions here are
