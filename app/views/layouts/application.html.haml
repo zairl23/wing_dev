@@ -33,17 +33,17 @@
           %li
             %a{ :href => 'http://0.0.0.0:3000/'}首页
           %li
-            = link_to '书籍' , books_path
+            = link_to '书籍', books_path
           %li
-            %a{ :href => 'http://0.0.0.0:3000/albums'}音乐
+            = link_to '音乐', albums_path
           %li
-            %a{ :href => 'http://0.0.0.0:3000/autors'}大师
+            =link_to '大师', autors_path
           %li
-            %a{ :href => 'http://0.0.0.0:3000/tupians'}图片
+            = link_to '图片', tupians_path
           %li
-            %a{ :href => 'http://0.0.0.0:3000/poemtries'}诗歌
+            = link_to '诗歌', poemtries_path
           %li
-            %a{ :href => 'http://0.0.0.0:3000/ufo/index'}揭密
+            %a{ :href => 'root_path/ufo/index'}揭密
                    
       #content
         = yield
