@@ -7,5 +7,5 @@ if Compass::AppIntegration::Rails.env == "production"
 #end
 require ::File.expand_path('../config/environment', __FILE__)
 use Rack::Static, :urls => ["/stylesheets/compiled"], :root => "tmp"
-
+end
 run WingDev::Application
