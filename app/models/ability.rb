@@ -1,18 +1,18 @@
 class Ability
-  #include CanCan::Ability
+  include CanCan::Ability
 
-  #def initialize(user)
-   # can :access, :rails_admin
+  def initialize(user)
+    can :access, :rails_admin
     # Define abilities for the passed in user here. For example:
-   # user ||= User.new # guest user (not logged in)
-  #     if user.role? :admin
-   #      can :manage, :all
-   #      can :see_timestamps, User
-#
-   #    elsif user.role? :normal
-   #      can :manage, User, :id => user.id 
-  #       can :see_timestamps, User, :id => user.id    
-  #    end
+    user ||= User.new # guest user (not logged in)
+       if user.role? :super_admin
+         can :manage, :all
+         can :see_timestamps, User
+
+      elsif user.role? :normal
+        can :manage, User, :id => user.id 
+        can :see_timestamps, User, :id => user.id    
+      end
       
     #
     # The first argument to `can` is the action you are giving the user permission to do.
