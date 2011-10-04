@@ -6,7 +6,7 @@
  # require 'fileutils'
   #FileUtils.mkdir_p(Rails.root.join("tmp", "stylesheets", "compiled"))
 #end
-if Compass::AppIntegration::Rails.env
+if Compass::AppIntegration::Rails.env_production?
   require 'fileutils'
   FileUtils.mkdir_p(Rails.root.join("tmp", "stylesheets","compiled"))
 

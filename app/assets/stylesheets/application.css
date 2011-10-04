@@ -184,8 +184,7 @@ body .page th, body .page td, body .page caption {
   padding: 4px 10px 4px 5px;
 }
 /* line 85, ../../../../../../usr/local/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body .page table.striped tr:nth-child(even) td,
-body .page table tr.even td {
+body .page table.striped tr:nth-child(even) td, body .page table tr.even td {
   background: #e5ecf9;
 }
 /* line 86, ../../../../../../usr/local/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
