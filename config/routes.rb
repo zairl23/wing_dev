@@ -29,10 +29,14 @@ WingDev::Application.routes.draw do
   get "ufo/index"
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-
   devise_for :users
-
-
+  resources :users
+#Redirect to a specific page on successful sign in 
+  namespace :user do
+    root :to => "zhuye#index"
+  end
+  # match '/user' => "welcome#index", :as => :user_root
+  #
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
