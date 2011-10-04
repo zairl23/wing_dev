@@ -2,14 +2,14 @@
 %html
   %head
     %title WingFlying
-      = stylesheet_link_tag 'application'
-      = stylesheet_link_tag 'print',:media => 'screen, projection'
-      = stylesheet_link_tag 'screen',:media => 'screen, projection'
-      = stylesheet_link_tag 'link_icons.css', :media => 'screen, projection' 
+    = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'print',:media => 'screen, projection'
+    = stylesheet_link_tag 'screen',:media => 'screen, projection'
+    = stylesheet_link_tag 'link_icons.css', :media => 'screen, projection' 
     /[if lt IE 8]
-      = stylesheet_link_tag 'ie'
-      = javascript_include_tag 'application.js'
-      = csrf_meta_tags
+    = stylesheet_link_tag 'ie'
+    = javascript_include_tag 'application.js'
+    = csrf_meta_tags
   
   %body
     
