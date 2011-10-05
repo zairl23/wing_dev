@@ -41,6 +41,9 @@ module WingDev
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.assets.paths << File.join(Rails.root, 'public','assets', 'stylesheets')
+    config.assets.paths << File.join(Rails.root, 'tmp', 'stylesheets', 'compiled') 
+    config.assets.compress = true
     #Change allowed default attributes
     #config.action_view.sanitized_allowed_attributes = 'a'
     
@@ -52,6 +55,6 @@ module WingDev
       g.template_engine :haml
     end
     
-    
+  
   end
 end
