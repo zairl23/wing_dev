@@ -41,7 +41,7 @@ end
 
 group :production do
   gem "pg"
-  gem "bootstrap", :git => "https://github.com/twitter/bootstrap.git"
+ 
 end
 
 group :development, :test do
