@@ -39,7 +39,7 @@ module WingDev
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
-    # Enable the asset pipeline
+    # Enable the asset pipeline,show:Rails.application.config.assets.paths,in Rails Console
     config.assets.enabled = true
     config.assets.paths << File.join(Rails.root, 'public','assets', 'stylesheets')
     config.assets.paths << File.join(Rails.root, 'tmp', 'stylesheets', 'compiled') 
