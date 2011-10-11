@@ -1,0 +1,9 @@
+%h2书籍列表 
+
+- @books.each do |book|
+  %ul
+    %li
+      %h2
+      = link_to book.name, book 
+
+

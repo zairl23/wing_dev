@@ -1,5 +1,7 @@
 WingDev::Application.routes.draw do
   
+ # resources :commits
+
   resources :tupians
 
   resources :pictures
@@ -24,17 +26,23 @@ WingDev::Application.routes.draw do
 
   root :to => 'zhuye#index'
 
-  resources :samples,:books,:autors,:albums,:poemtries,:shiges
+  resources :samples,:autors,:albums,:poemtries,:shiges,:books
 
   get "ufo/index"
+  #match 'login' => 'users#sign_in', :as => :login
+  #match 'logout' => 'user_sessions#destroy', :as => :logout
 
+  get  '/books/:book_id/new_commit' => 'books#new_commit', :as => :new_commit_book
+  post '/books/:book_id/save_commit' => 'books#save_commit', :as => :new_commit_book
+  put '/books/:book_id/save_commit' => 'books#save_commit', :as => :new_commit_book
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-  devise_for :users
-  resources :users
+  devise_for :users 
+  #:controllers => { :registrations => "users/registrations" ,:sessions => "users/sessions"}
+  #resources :users
+  
 #Redirect to a specific page on successful sign in 
-  namespace :user do
-    root :to => "zhuye#index"
-  end
+ 
+  
   # match '/user' => "welcome#index", :as => :user_root
   #
   # The priority is based upon order of creation:
@@ -93,4 +101,7 @@ WingDev::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
+  #resources :books do
+  #@  resources :commits, :controller => 'book_commits'
+  #end
 end

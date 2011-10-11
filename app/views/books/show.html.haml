@@ -1,0 +1,52 @@
+
+%img{ :src => @book.url }\
+
+%p
+  %b作者：
+  = link_to @autor.name,@autor
+
+%p
+  %b书名：
+  = @book.name 
+
+
+%p
+  %b简介：
+  %br
+  = sanitize @book.description
+
+
+%p
+  %b目录：
+  %br
+  = sanitize @book.summary
+
+
+%p
+  %b探索它吧！
+  %br
+  = sanitize @book.links
+
+= link_to "返回列表", books_path 
+%br
+
+%b评论
+%br
+%p
+- @commits.each do |commit|
+  %p
+  = commit.user.email
+  %b 说：
+  %br
+  = commit.content
+%br
+
+%b说说你的感受吧！
+
+%p
+= form_for @book , :url => new_commit_book_url(@book) do |f| 
+  = f.fields_for :commit do |cf|
+    = cf.text_area :content
+  
+  .actions
+    = f.submit '发表评论'

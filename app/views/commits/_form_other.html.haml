@@ -1,0 +1,7 @@
+
+= form_for ([@book,@commit]) do |f|
+  .field
+    = f.label :content
+    = f.text_area :content
+  .actions
+    = f.submit 'Create'

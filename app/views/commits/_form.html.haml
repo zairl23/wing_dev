@@ -1,0 +1,19 @@
+= form_for @commit do |f|
+  -if @commit.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@commit.errors.count, "error")} prohibited this commit from being saved:"
+      %ul
+        - @commit.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :content
+    = f.text_area :content
+  .field
+    = f.label :user_id
+    = f.number_field :user_id
+  .field
+    = f.label :book_id
+    = f.number_field :book_id
+  .actions
+    = f.submit 'Save'

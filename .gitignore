@@ -4,3 +4,4 @@ log/*.log
 tmp/cache/
 tmp/sass-cache/
 .sass-cache/
+vendor/cache

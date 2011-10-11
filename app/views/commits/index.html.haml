@@ -1,0 +1,23 @@
+%h1 Listing commits
+
+%table
+  %tr
+    %th Content
+    %th User
+    %th Book
+    %th
+    %th
+    %th
+
+  - @commits.each do |commit|
+    %tr
+      %td= commit.content
+      %td= commit.user_id
+      %td= commit.book_id
+      %td= link_to 'Show', commit
+      %td= link_to 'Edit', edit_commit_path(commit)
+      %td= link_to 'Destroy', commit, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Commit', new_commit_path

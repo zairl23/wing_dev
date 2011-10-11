@@ -1,6 +1,7 @@
 <% if user_signed_in? %>
   <li>
-  <%= link_to('管理账户', edit_user_registration_path) %>
+  你好！
+  <%= link_to(current_user.email, edit_user_registration_path) %>
   </li>
 <% else %>
   <li>

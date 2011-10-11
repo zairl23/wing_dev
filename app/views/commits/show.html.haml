@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Content:
+  = @commit.content
+%p
+  %b User:
+  = @commit.user_id
+%p
+  %b Book:
+  = @commit.book_id
+
+= link_to 'Edit', edit_commit_path(@commit)
+\|
+= link_to 'Back', commits_path

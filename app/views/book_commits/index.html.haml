@@ -1,0 +1,7 @@
+%p
+- @book.commits.each do |commit|
+  %p
+  = commit.user.email
+  %b 说：
+  %br
+  = commit.content

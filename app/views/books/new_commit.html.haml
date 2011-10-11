@@ -1,0 +1,16 @@
+- @commit = @book.commits.build
+= form_for @commit , :url => new_commit_book_url(@book) do |f| 
+  - if @commit.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@commit.errors.count, "error")} prohibited this commit from being saved:"
+      %ul
+      - @commit.errors.full_messages.each do |msg|
+        %li= msg
+  
+  .field
+    
+    = f.text_area :content
+  
+  .actions
+    = f.submit 
+   
