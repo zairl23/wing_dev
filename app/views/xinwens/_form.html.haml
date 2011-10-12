@@ -1,0 +1,16 @@
+= form_for @xinwen do |f|
+  -if @xinwen.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@xinwen.errors.count, "error")} prohibited this xinwen from being saved:"
+      %ul
+        - @xinwen.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :content
+    = f.text_area :content
+  .actions
+    = f.submit 'Save'

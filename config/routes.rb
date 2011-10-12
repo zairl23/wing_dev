@@ -1,5 +1,7 @@
 WingDev::Application.routes.draw do
   
+  resources :xinwens
+
  # resources :commits
 
   resources :tupians

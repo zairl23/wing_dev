@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @xinwen.title
+%p
+  %b Content:
+  = @xinwen.content
+
+= link_to 'Edit', edit_xinwen_path(@xinwen)
+\|
+= link_to 'Back', xinwens_path

@@ -222,32 +222,56 @@ body .page #header {
   background-repeat: repeat-x;
   background-position: top left;
 }
-/* line 33, ../../../app/stylesheets/application.sass */
+/* line 30, ../../../app/stylesheets/application.sass */
+body .page #header .left-nav {
+  margin: 0;
+  padding: 10px 0 0 46px;
+  list-style: none;
+  float: left;
+}
+/* line 35, ../../../app/stylesheets/application.sass */
+body .page #header .left-nav li {
+  float: left;
+}
+/* line 37, ../../../app/stylesheets/application.sass */
+body .page #header .left-nav li a {
+  font-size: 20px;
+  margin: 0 8px 0 0;
+  display: block;
+}
+/* line 41, ../../../app/stylesheets/application.sass */
+body .page #header .right-nav {
+  float: right;
+}
+/* line 43, ../../../app/stylesheets/application.sass */
+body .page #header .right-nav li {
+  float: rignt;
+}
+/* line 46, ../../../app/stylesheets/application.sass */
 body .page #sidebar {
   display: inline;
   float: left;
-  margin-right: 0;
-  width: 310px;
-  padding-left: 640px;
+  margin-right: 10px;
+  width: 270px;
   display: inline;
   float: left;
   position: relative;
-  margin: 0 -80px 1.5em 80px;
+  margin: 0 -40px 1.5em 40px;
 }
 /* line 147, ../../../../.rvm/gems/ruby-1.9.2-p290@rails311/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body .page #sidebar {
   overflow-x: hidden;
 }
-/* line 37, ../../../app/stylesheets/application.sass */
+/* line 50, ../../../app/stylesheets/application.sass */
 body .page #content {
   display: inline;
   float: left;
-  margin-right: 10px;
-  width: 630px;
+  margin-right: 0;
+  width: 670px;
   display: inline;
   float: left;
   position: relative;
-  margin-left: -910px;
+  margin-left: -40px;
   margin-bottom: 1.5em;
 }
 /* line 147, ../../../../.rvm/gems/ruby-1.9.2-p290@rails311/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */

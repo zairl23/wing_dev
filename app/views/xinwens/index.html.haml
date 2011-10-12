@@ -1,0 +1,21 @@
+%h1 Listing xinwens
+
+%table
+  %tr
+    %th Title
+    %th Content
+    %th
+    %th
+    %th
+
+  - @xinwens.each do |xinwen|
+    %tr
+      %td= xinwen.title
+      %td= xinwen.content
+      %td= link_to 'Show', xinwen
+      %td= link_to 'Edit', edit_xinwen_path(xinwen)
+      %td= link_to 'Destroy', xinwen, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Xinwen', new_xinwen_path

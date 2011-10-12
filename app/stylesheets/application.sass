@@ -27,16 +27,29 @@ body
       background-image: url("/assets/nav_wood.png")
       background-repeat: repeat-x
       background-position: top left
-     
-          
+      .left-nav
+        margin: 0
+        padding: 10px 0 0 46px
+        list-style: none
+        float: left
+        li
+          float: left
+          a
+            font-size: 20px
+            margin: 0 8px 0 0
+            display: block
+      .right-nav
+        float: right
+        li
+          float: rignt
       
     #sidebar
-      +column(8,true)
-      +prepend(16)
-      +push(2)
+      +column(7)
+      +push(1)
+      
     #content
-      +column(16)
-      +pull(23,true)
+      +column(17,true)
+      +pull(1)
       +append-bottom()
       
     

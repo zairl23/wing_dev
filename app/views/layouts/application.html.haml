@@ -2,11 +2,10 @@
 %html
   %head
     %title WingFlying
-    = stylesheet_link_tag 'application'
-    = stylesheet_link_tag 'bootstrap'
-    = stylesheet_link_tag 'print',:media => 'screen, projection'
-    = stylesheet_link_tag 'screen',:media => 'screen, projection'
-    = stylesheet_link_tag 'link_icons.css', :media => 'screen, projection' 
+    = stylesheet_link_tag "application"
+    = stylesheet_link_tag "print"
+    = stylesheet_link_tag "screen"
+     
     /[if lt IE 8]
     = stylesheet_link_tag 'ie'
     = javascript_include_tag 'application.js'
@@ -16,8 +15,9 @@
     
     .page
       #header
-        %h1 Welcome to WingFlying!
-        %ul
+        %ul.left-nav
+          = render 'layouts/header-nav.html'
+        %ul.right-nav
           = render 'users/shared/login'
           = render 'users/shared/registration'
       #sidebar
