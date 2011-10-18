@@ -17,7 +17,7 @@ class CommitsController < ApplicationController
       return 1 ;
     end
     #新建并保存一个commit实例，并保存user_id
-    @commit = Commit.new(params[:commit])
+    @commit = Commit.create(params[:commit])
     @commit.user_id = current_user.id 
     @commit.commitable_type = commitable
     #指定保存后的页面跳转线路
