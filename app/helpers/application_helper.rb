@@ -12,4 +12,11 @@ module ApplicationHelper
     end
     html
   end
+  
+  #add a url acrooos all controller
+  def commitable_url
+    instance_variable = instance_variable_get("@#{controller.controller_name.singularize}")
+    commitable = controller.controller_name.singularize
+    commits_path(:commitable_type => commitable, :commitable_id => instance_variable.id)
+  end
 end

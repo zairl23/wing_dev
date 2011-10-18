@@ -242,12 +242,13 @@ body .page #header .left-nav li a {
 /* line 41, ../../../app/stylesheets/application.sass */
 body .page #header .right-nav {
   float: right;
+  list-style: none;
 }
-/* line 43, ../../../app/stylesheets/application.sass */
+/* line 44, ../../../app/stylesheets/application.sass */
 body .page #header .right-nav li {
-  float: rignt;
+  float: right;
 }
-/* line 46, ../../../app/stylesheets/application.sass */
+/* line 47, ../../../app/stylesheets/application.sass */
 body .page #sidebar {
   display: inline;
   float: left;
@@ -262,7 +263,7 @@ body .page #sidebar {
 * html body .page #sidebar {
   overflow-x: hidden;
 }
-/* line 50, ../../../app/stylesheets/application.sass */
+/* line 51, ../../../app/stylesheets/application.sass */
 body .page #content {
   display: inline;
   float: left;

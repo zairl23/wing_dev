@@ -2,7 +2,7 @@ WingDev::Application.routes.draw do
   
   resources :xinwens
 
- # resources :commits
+  resources :commits
 
   resources :tupians
 
@@ -28,15 +28,22 @@ WingDev::Application.routes.draw do
 
   root :to => 'zhuye#index'
 
-  resources :samples,:autors,:albums,:poemtries,:shiges,:books
+  resources :samples,:autors,:albums,:poemtries,:shiges,:books, :commits
 
   get "ufo/index"
   #match 'login' => 'users#sign_in', :as => :login
   #match 'logout' => 'user_sessions#destroy', :as => :logout
-
+  #put '/commitables/:commitable_id/save_commit' => 'commitable#save_commit', :as => :new_commit
+  #get '/commitables/:commitable_id/new_commit' => 'commitable#new_commit', :as => :new_commit
+  #get  '/albums/:album_id/new_commit' => 'albums#new_commit', :as => :new_commit
+  #post '/albums/:album_id/save_commit' => 'albums#save_commit', :as => :new_commit
+  #put '/albums/:album_id/save_commit' => 'albums#save_commit', :as => :new_commit
   get  '/books/:book_id/new_commit' => 'books#new_commit', :as => :new_commit_book
   post '/books/:book_id/save_commit' => 'books#save_commit', :as => :new_commit_book
   put '/books/:book_id/save_commit' => 'books#save_commit', :as => :new_commit_book
+  get 'xinwens/:xinwen_id/new_commit' => 'xinwens#new_commit', :as => :new_commit_xinwen
+  post '/xinwens/:xinwen_id/save_commit' => 'xinwens#save_commit', :as => :new_commit_xinwen
+  put '/xinwens/:xinwen_id/save_commit' => 'xinwens#save_commit', :as => :new_commit_xinwen
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   devise_for :users 
   #:controllers => { :registrations => "users/registrations" ,:sessions => "users/sessions"}

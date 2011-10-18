@@ -38,3 +38,14 @@
 </p>
 
 <%= link_to '退回列表', albums_path %>
+
+<% @commits.each do |commit| %>
+  <p>
+    <%= commit.user %>
+    说：
+    <br />
+    <%= commit.content %>
+  </p>
+<% end %>  
+
+<%=render :partial => 'commits/new_commit', controller.controller_name => 'album'%>

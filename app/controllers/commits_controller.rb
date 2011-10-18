@@ -1,83 +1,36 @@
 class CommitsController < ApplicationController
-  # GET /commits
-  # GET /commits.json
-  def index
-    @commits = Commit.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @commits }
-    end
-  end
-
-  # GET /commits/1
-  # GET /commits/1.json
-  def show
-    @commit = Commit.find(params[:id])
+  before_filter :find_commitable
+  
+  def new
+    
+    @commit = Commit.new
     
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @commit }
+      format.html
     end
-  end
-
-  # GET /commits/new
-  # GET /commits/new.json
-  def new
-    @commit = Commit.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @commit }
-    end
-  end
-
-  # GET /commits/1/edit
-  def edit
-    @commit = Commit.find(params[:id])
-  end
-
-  # POST /commits
-  # POST /commits.json
+  end 
+#create commit
   def create
+   #只有会员才能发表评论
+    if !current_user
+      redirect_to new_user_session_path #返回到登录界面登录或注册
+      return 1 ;
+    end
+    #新建并保存一个commit实例，并保存user_id
     @commit = Commit.new(params[:commit])
-
+    @commit.user_id = current_user.id 
+    @commit.commitable_type = commitable
+    #指定保存后的页面跳转线路
     respond_to do |format|
-      if @commit.save
-        format.html { redirect_to @commit, notice: 'Commit was successfully created.' }
-        format.json { render json: @commit, status: :created, location: @commit }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @commit.errors, status: :unprocessable_entity }
-      end
+      format.html { redirect_to :controller => @commitable.class.to_s.pluralize.downcase, :action => 'show', :id => params[:commitable_id] }
     end
   end
-
-  # PUT /commits/1
-  # PUT /commits/1.json
-  def update
-    @commit = Commit.find(params[:id])
-
-    respond_to do |format|
-      if @commit.update_attributes(params[:commit])
-        format.html { redirect_to @commit, notice: 'Commit was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @commit.errors, status: :unprocessable_entity }
-      end
-    end
+  
+  private
+  #通过表单的contoller值初始化@commitable
+  def find_commitable
+    @kclass = params[:commitable_type].capitalize.constantize#将:commitale_type转化为相应的类名
+    @commitable = @kclass.find(params[:commitable_id])
   end
-
-  # DELETE /commits/1
-  # DELETE /commits/1.json
-  def destroy
-    @commit = Commit.find(params[:id])
-    @commit.destroy
-
-    respond_to do |format|
-      format.html { redirect_to commits_url }
-      format.json { head :ok }
-    end
-  end
+  
 end

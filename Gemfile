@@ -55,4 +55,4 @@ gem 'paperclip'
 gem 'rb-inotify'
 gem 'haml-rails',:git => "https://github.com/indirect/haml-rails.git"
 gem 'cancan'
-
+gem 'rack', '1.3.3'

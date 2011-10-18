@@ -14,7 +14,7 @@ class XinwensController < ApplicationController
   # GET /xinwens/1.json
   def show
     @xinwen = Xinwen.find(params[:id])
-
+    @commits = @xinwen.commits
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @xinwen }
@@ -78,6 +78,36 @@ class XinwensController < ApplicationController
     respond_to do |format|
       format.html { redirect_to xinwens_url }
       format.json { head :ok }
+    end
+  end
+  
+#add commit 
+  def new_commit
+    @xinwen = Xinwen.find(params[:xinwen_id])
+    @commit = @xinwen.commits.build
+   
+    respond_to do |format| 
+      format.html
+    end 
+  end
+
+#save commit
+  def save_commit
+    #判断是否登录
+    if !current_user
+      redirect_to new_user_session_path
+      return 1 ;
+    end
+    
+    @xinwen = Xinwen.find(params[:xinwen_id])
+    @commit = @xinwen.commits.build(params[:xinwen][:commit])
+    @commit.user_id = current_user.id
+    respond_to do |format|
+      if @commit.save! 
+        format.html { redirect_to @xinwen, :notice => 'your commit is saved!'}
+      else
+        format.html { render :action => 'new_commit'}
+      end
     end
   end
 end

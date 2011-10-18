@@ -1,0 +1,5 @@
+= form_for @xinwen, :url => new_commit_xinwen_url(@xinwen) do |f|
+  = f.fields_for :commit do |fd|
+    = fd.text_area :content
+  .actions
+    = f.submit '发表评论' 

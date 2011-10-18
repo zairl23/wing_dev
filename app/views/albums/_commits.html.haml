@@ -1,0 +1,6 @@
+- @commits.each do |commit|
+  %p
+    = commit.user.email
+    说：
+    <br />
+    = commit.content

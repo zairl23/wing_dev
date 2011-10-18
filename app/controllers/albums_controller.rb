@@ -16,6 +16,8 @@ class AlbumsController < ApplicationController
     @album = Album.find(params[:id])
     @autor = @album.autor
     @musics = @album.musics
+    @commits = @album.commits
+    @commit = Commit.new
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @album }

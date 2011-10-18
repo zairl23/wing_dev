@@ -15,8 +15,9 @@
     
     .page
       #header
-        %h1 Welcome to WingFlying!
-        %ul
+        %ul.left-nav
+          = render 'layouts/header-nav.html'
+        %ul.right-nav
           = render 'users/shared/login'
           = render 'users/shared/registration'
       #sidebar

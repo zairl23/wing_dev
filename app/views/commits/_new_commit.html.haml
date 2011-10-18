@@ -1,0 +1,4 @@
+= form_for @commit, :url => commitable_url do |f|
+  = f.text_area :content 
+  .actions
+    = f.submit '发表评论' 

@@ -13,6 +13,7 @@ class AutorsController < ApplicationController
       @albums = @autor.albums
       @books = @autor.books
       @poemtries = @autor.poemtries
+      
       respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @autor }
